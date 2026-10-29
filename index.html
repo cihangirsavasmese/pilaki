@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Pilaki Balık Restaurant için dijital ön değerlendirme ve 90 günlük planın ana hatları.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pilaki Büyüme Planı">
+<meta property="og:description" content="Kamera hazır. Şimdi sıra masaları doldurmakta. Pilaki için ön değerlendirme ve 90 günlük planın ana hatları.">
+<meta name="theme-color" content="#1E2C6E">
+<title>Pilaki Büyüme Planı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: lacivert açılış bandı, ardından dar okuma sütunu; gizli ayrıntılar karartma şeritleriyle gösterilir */
+:root {
+  --bg: #F4F6FA;
+  --surface: #FFFFFF;
+  --ink: #16203F;
+  --muted: #586282;
+  --line: #DCE1EC;
+  --sea: #2C3E91;
+  --sea-soft: #E6EAF7;
+  --tile: #C9551F;
+  --tile-soft: #FBEBE2;
+  --band: #1E2C6E;
+  --on-band: #FFFFFF;
+  --on-band-muted: #C3CBEA;
+  --redact: #16203F;
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1324; --surface: #161C33; --ink: #E7EAF4; --muted: #9AA3C0; --line: #2A3352;
+    --sea: #93A5FF; --sea-soft: #1E2850; --tile: #F08A55; --tile-soft: #3A2318;
+    --band: #141B3D; --on-band: #F1F3FB; --on-band-muted: #A9B3D8; --redact: #3B4670;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1324; --surface: #161C33; --ink: #E7EAF4; --muted: #9AA3C0; --line: #2A3352;
+  --sea: #93A5FF; --sea-soft: #1E2850; --tile: #F08A55; --tile-soft: #3A2318;
+  --band: #141B3D; --on-band: #F1F3FB; --on-band-muted: #A9B3D8; --redact: #3B4670;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 1.02rem; line-height: 1.65; }
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--f-display); margin: 0; line-height: 1.12; text-wrap: balance; }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 760; font-stretch: 112%; }
+h3 { font-size: 1.08rem; font-weight: 700; font-stretch: 105%; }
+p { margin: 0; }
+.eyebrow { font-family: var(--f-data); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+
+.band { background: var(--band); color: var(--on-band); }
+.band .wrap { padding-block: 48px 44px; display: grid; gap: 20px; }
+.band .eyebrow { color: var(--on-band-muted); }
+.band h1 { font-size: clamp(2.1rem, 7vw, 3.6rem); font-weight: 800; font-stretch: 122%; letter-spacing: -0.01em; }
+.band h1 em { font-style: normal; color: #F4A57C; }
+.band .lede { max-width: 58ch; font-size: 1.1rem; }
+.mark { display: flex; align-items: center; gap: 12px; }
+
+main .wrap { display: grid; gap: 64px; padding-block: 48px 72px; }
+section { display: grid; gap: 22px; min-width: 0; }
+.head { display: grid; gap: 8px; }
+.head p { color: var(--muted); max-width: 62ch; }
+
+/* Teşhis */
+.facts { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.fact { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 20px; padding-block: 18px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.fact .v { font-family: var(--f-display); font-size: 2.1rem; font-weight: 780; font-stretch: 112%; line-height: 1; color: var(--sea); }
+.fact .v small { font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+.fact .t { display: grid; gap: 2px; min-width: 0; }
+.fact .t b { font-weight: 600; }
+.fact.alert .v { color: var(--tile); }
+
+/* Roller döngüsü */
+.loop { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 6px; align-content: start; position: relative; min-width: 0; }
+.step .who { font-family: var(--f-data); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.step.mine { border-color: var(--sea); background: var(--sea-soft); }
+.step.mine .who { color: var(--sea); }
+.step p { font-size: 0.92rem; color: var(--muted); }
+.loop-note { font-size: 0.92rem; color: var(--muted); }
+
+/* Karartma */
+.redact { display: inline-block; background: var(--redact); color: transparent; border-radius: 2px; user-select: none; line-height: 1.1; vertical-align: -1px; }
+.redact.w1 { width: 5.5em; } .redact.w2 { width: 8em; } .redact.w3 { width: 12em; } .redact.w4 { width: 16em; max-width: 100%; }
+.lock { font-family: var(--f-data); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--tile); display: inline-flex; gap: 6px; align-items: center; }
+.lock svg { flex: none; }
+
+/* Fazlar */
+.phases { display: grid; gap: 14px; }
+.phase { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.phase .when { display: grid; gap: 4px; align-content: start; }
+.phase .when b { font-family: var(--f-display); font-size: 1.3rem; font-weight: 780; font-stretch: 115%; }
+.phase .body { display: grid; gap: 10px; min-width: 0; }
+.phase ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.phase li { display: flex; gap: 10px; align-items: center; font-size: 0.95rem; }
+.phase li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--line); flex: none; }
+
+/* Örnek brif */
+.brief { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.brief-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; padding: 18px 20px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.brief-top h3 { font-size: 1.3rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--f-data); font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: var(--sea-soft); color: var(--sea); white-space: nowrap; }
+.brief-grid { display: grid; grid-template-columns: 8rem minmax(0, 1fr); }
+.brief-grid > dt, .brief-grid > dd { margin: 0; padding: 13px 20px; border-bottom: 1px solid var(--line); }
+.brief-grid > dt { font-family: var(--f-data); font-size: 0.74rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); padding-top: 16px; }
+.brief-grid > dd { min-width: 0; }
+.brief-grid > dt:last-of-type, .brief-grid > dd:last-of-type { border-bottom: 0; }
+.shots { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.shots li { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 10px; font-size: 0.95rem; }
+.shots .tc { font-family: var(--f-data); font-size: 0.78rem; color: var(--tile); padding-top: 2px; }
+.overlay { font-family: var(--f-display); font-weight: 700; font-stretch: 110%; }
+
+.more-briefs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.locked { border: 1px dashed var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.locked .tags .tag { background: var(--bg); color: var(--muted); }
+
+/* Ölçüm */
+.metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.metric { display: grid; gap: 2px; padding-block: 14px; border-bottom: 1px solid var(--line); min-width: 0; }
+.metric b { font-weight: 600; }
+.metric span { font-size: 0.93rem; color: var(--muted); }
+
+/* Kapanış */
+.close { background: var(--band); color: var(--on-band); border-radius: 14px; padding: 30px 28px; display: grid; gap: 14px; }
+.close h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); }
+.close p { color: var(--on-band-muted); max-width: 60ch; }
+.close ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 4px; color: var(--on-band); }
+.close .cta { font-family: var(--f-display); font-weight: 700; font-stretch: 110%; color: var(--on-band); font-size: 1.1rem; }
+
+footer .wrap { padding-block: 0 40px; font-size: 0.84rem; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .fact { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .loop { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .phase { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .phase .when { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 12px; }
+  .brief-grid { grid-template-columns: minmax(0, 1fr); }
+  .brief-grid > dt { border-bottom: 0; padding-bottom: 0; }
+  .more-briefs, .metrics { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px) { .loop { grid-template-columns: minmax(0, 1fr); } }
+body { margin: 0; -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+</style>
+</head>
+<body>
+
+<header class="band" lang="tr">
+  <div class="wrap">
+    <div class="mark">
+      <svg width="44" height="26" viewBox="0 0 38 22" aria-hidden="true"><path d="M2 12c4-5 10-7 16-5l8-5-3 8 3 8-8-5c-6 2-12 0-16-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span class="eyebrow">Pilaki Balık Restaurant · Ön değerlendirme · Ekim 2026</span>
+    </div>
+    <h1>Kamera hazır.<br>Şimdi sıra <em>masaları doldurmakta.</em></h1>
+    <p class="lede">Pilaki'nin Instagram hesabını, bio linkini ve Google kaydını Ankara'daki yedi balık restoranıyla karşılaştırdım. Aşağıda gördüklerimin özeti ve önümüzdeki 90 gün için planın ana hatları var. Ayrıntıları görüşmede birlikte açalım.</p>
+  </div>
+</header>
+
+<main lang="tr">
+  <div class="wrap">
+
+    <section aria-labelledby="h-gordugum">
+      <div class="head">
+        <span class="eyebrow">Gördüklerim</span>
+        <h2 id="h-gordugum">Misafirler Pilaki'yi seviyor. Instagram bunu henüz göstermiyor.</h2>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="v num">4,4 <small>/ 779</small></span><div class="t"><b>Google'da güçlü bir itibar</b><span class="muted">779 yorum, bölgedeki balık restoranlarının çoğundan fazla. Bu ilginin Instagram'a ve rezervasyona yansıması gerekiyor.</span></div></div>
+        <div class="fact"><span class="v num">18</span><div class="t"><b>Instagram'daki toplam gönderi</b><span class="muted">Yakın rakiplerin çoğunda bu sayı 550 ile 760 arasında. Hesap Haziran 2024'ten 15 Ekim 2026'ya kadar, 28 ay boyunca hiç paylaşım yapmamış.</span></div></div>
+        <div class="fact"><span class="v num">0</span><div class="t"><b>Profilde menü, konum veya çalışma saati</b><span class="muted">Yakın rakiplerin en az üçü menüsünü Instagram'dan bir dokunuşla gösteriyor. Pilaki'de menü hiçbir kanalda yok.</span></div></div>
+        <div class="fact alert"><span class="v">!</span><div class="t"><b>Bio linkinde düzeltilmesi gereken bir ayrıntı</b><span class="muted">Link sayfasında yasal açıdan sorun çıkarabilecek bir unsur var. Görüşmede göstereyim; düzeltmesi kısa sürer.</span></div></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-roller">
+      <div class="head">
+        <span class="eyebrow">Yeni çekimler</span>
+        <h2 id="h-roller">Görüntüler doğru yönde. Eksik olan, onları yönetecek bir plan.</h2>
+        <p>Ekim'deki çekimler mekânın en güçlü yanlarını yakalıyor: camekân, hasır avizeler, turuncu masalar ve sıcak ışık. Ancak iyi bir fotoğraf tek başına rezervasyon getirmez. Neyin, ne zaman, kim için ve hangi amaçla çekileceğine karar veren bir döngü gerekiyor.</p>
+      </div>
+      <div class="loop">
+        <div class="step mine"><span class="who">Yönetim</span><h3>Brif</h3><p>Bu hafta neyi, hangi amaçla çekiyoruz?</p></div>
+        <div class="step"><span class="who">Fotoğrafçı</span><h3>Çekim</h3><p>Brife göre fotoğraf ve video üretimi.</p></div>
+        <div class="step mine"><span class="who">Yönetim</span><h3>Yayın</h3><p>Kurgu, metin, zamanlama, profil ve Google.</p></div>
+        <div class="step mine"><span class="who">Yönetim</span><h3>Ölçüm</h3><p>Ne işe yaradı? Sonraki brif buna göre yazılır.</p></div>
+      </div>
+      <p class="loop-note">Fotoğrafçı en iyi bildiği işe, yani çekime odaklanır. Geri kalan her şey tek elden yürür ve her çekim gününün bir amacı olur.</p>
+    </section>
+
+    <section aria-labelledby="h-plan">
+      <div class="head">
+        <span class="eyebrow">90 günlük plan</span>
+        <h2 id="h-plan">Üç aşama, her birinin ölçülebilir bir hedefi var</h2>
+      </div>
+      <div class="phases">
+        <article class="phase">
+          <div class="when"><b>Vitrin</b><span class="eyebrow">1–2. hafta</span></div>
+          <div class="body">
+            <p><b>Hedef:</b> Profili gören birinin rezervasyona en fazla iki dokunuşta ulaşması.</p>
+            <ul>
+              <li>Profil ve bio yeniden kurgusu</li>
+              <li>Link sayfasının yenilenmesi ve risklerin giderilmesi</li>
+              <li>Google kaydının düzeltilmesi</li>
+              <li><span class="redact w3">gizli</span></li>
+            </ul>
+            <span class="lock"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><rect x="1" y="5" width="9" height="6.5" rx="1" fill="currentColor"/><path d="M3 5V3.5a2.5 2.5 0 015 0V5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Ayrıntılar görüşmede</span>
+          </div>
+        </article>
+        <article class="phase">
+          <div class="when"><b>Ritim</b><span class="eyebrow">3–8. hafta</span></div>
+          <div class="body">
+            <p><b>Hedef:</b> Haftada en az üç paylaşımla hesabın her gün yaşadığını göstermek.</p>
+            <ul>
+              <li>Dört içerik serisi: <span class="redact w2">gizli</span>, <span class="redact w1">gizli</span> ve iki tane daha</li>
+              <li>Aylık çekim takvimi ve her çekim günü için brif</li>
+              <li><span class="redact w4">gizli</span></li>
+            </ul>
+            <span class="lock"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><rect x="1" y="5" width="9" height="6.5" rx="1" fill="currentColor"/><path d="M3 5V3.5a2.5 2.5 0 015 0V5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Ayrıntılar görüşmede</span>
+          </div>
+        </article>
+        <article class="phase">
+          <div class="when"><b>Büyüme</b><span class="eyebrow">9–12. hafta</span></div>
+          <div class="body">
+            <p><b>Hedef:</b> Misafirlerin Pilaki'yi kendiliğinden paylaşması ve Ankara'daki balık listelerinde yer almak.</p>
+            <ul>
+              <li>Misafir içeriklerini toplama düzeni</li>
+              <li>Yerel görünürlük çalışması</li>
+              <li><span class="redact w3">gizli</span></li>
+            </ul>
+            <span class="lock"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><rect x="1" y="5" width="9" height="6.5" rx="1" fill="currentColor"/><path d="M3 5V3.5a2.5 2.5 0 015 0V5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Ayrıntılar görüşmede</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-brif">
+      <div class="head">
+        <span class="eyebrow">Bir örnek</span>
+        <h2 id="h-brif">Fotoğrafçıya giden brif böyle görünür</h2>
+        <p>Her çekim günü için hazırlanan brifin bir örneği. Fotoğrafçı sete ne çekeceğini, neden çekeceğini ve görüntünün nerede kullanılacağını bilerek gelir.</p>
+      </div>
+
+      <article class="brief">
+        <div class="brief-top">
+          <h3>Tezgâhta Bugün</h3>
+          <div class="tags"><span class="tag">Reels</span><span class="tag">12–15 sn</span><span class="tag">Dikey 9:16</span><span class="tag">Haftalık seri</span></div>
+        </div>
+        <dl class="brief-grid">
+          <dt>Amaç</dt>
+          <dd>Balığın her gün taze geldiğini göstermek ve izleyeni o akşam için rezervasyona yönlendirmek. Hamsi, palamut ve lüfer sezonunda haftada bir kez yayınlanır.</dd>
+          <dt>Çekim</dt>
+          <dd>
+            <ol class="shots">
+              <li><span class="tc">0–2 sn</span><span>Buz üzerinde günün balıkları, yukarıdan, doğal ışık. İlk karede balık parlak ve net görünmeli.</span></li>
+              <li><span class="tc">2–5 sn</span><span>Ustanın eli balığı kaldırıyor, solungaç yakın plan. Tazelik burada kanıtlanır.</span></li>
+              <li><span class="tc">5–9 sn</span><span>Izgarada ya da tavada pişerken yakın plan, cızırtı sesi kayıtta kalsın.</span></li>
+              <li><span class="tc">9–12 sn</span><span>Servis anı: tabak camekân önündeki masaya bırakılıyor, arkada mekân flu.</span></li>
+              <li><span class="tc">12–15 sn</span><span>Sabit kapanış karesi: tabak ve masa, üzerine yazı girecek kadar boşluk bırakılır.</span></li>
+            </ol>
+          </dd>
+          <dt>Ekran yazısı</dt>
+          <dd><span class="overlay">Bugün tezgâhta: palamut.</span> <span class="muted">Son karede: "Bu akşam için yerinizi ayırtın."</span></dd>
+          <dt>Ses</dt>
+          <dd>Müzik yok. Tezgâh, bıçak ve ızgara sesi önde. Telif sorunu da çıkmaz.</dd>
+          <dt>Yayın</dt>
+          <dd>Öğleden sonra, akşam planı yapılırken. Açıklamada balığın adı, konum etiketi ve WhatsApp ile rezervasyon çağrısı yer alır. Aynı gün öne çıkanlara eklenir.</dd>
+        </dl>
+      </article>
+
+      <div class="more-briefs">
+        <div class="locked"><div class="tags"><span class="tag">Reels</span><span class="tag">Haftalık</span></div><h3><span class="redact w2">gizli</span></h3><span class="lock">Görüşmede</span></div>
+        <div class="locked"><div class="tags"><span class="tag">Fotoğraf serisi</span></div><h3><span class="redact w3">gizli</span></h3><span class="lock">Görüşmede</span></div>
+        <div class="locked"><div class="tags"><span class="tag">Hikâye</span><span class="tag">Günlük</span></div><h3><span class="redact w2">gizli</span></h3><span class="lock">Görüşmede</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-olcum">
+      <div class="head">
+        <span class="eyebrow">Ölçüm</span>
+        <h2 id="h-olcum">Beğeniyi değil, masaya gelen misafiri sayarız</h2>
+        <p>İlk hafta mevcut durumun ölçümü alınır. Her ayın sonunda tek sayfalık bir rapor gelir: ne yapıldı, ne işe yaradı, sonraki ay neye odaklanılacak.</p>
+      </div>
+      <div class="metrics">
+        <div class="metric"><b>Rezervasyon talepleri</b><span>Profilden yapılan WhatsApp ve telefon dokunuşları</span></div>
+        <div class="metric"><b>Link tıklamaları</b><span>Menü, rezervasyon ve yol tarifi butonları ayrı ayrı</span></div>
+        <div class="metric"><b>Profil ziyaretleri</b><span>Gönderiyi görüp profile geçenlerin sayısı</span></div>
+        <div class="metric"><b>Google yorumları</b><span>Yeni yorum sayısı ve yanıtlanma oranı</span></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-gorusme">
+      <div class="close">
+        <span class="eyebrow" style="color:var(--on-band-muted)">Sonraki adım</span>
+        <h2 id="h-gorusme">30 dakikalık bir görüşmede planın tamamını açayım</h2>
+        <p>Görüşmede birlikte bakacaklarımız:</p>
+        <ul>
+          <li>Bio linkindeki riskli ayrıntı ve nasıl düzeltileceği</li>
+          <li>Dört içerik serisinin tamamı ve ilk ayın çekim takvimi</li>
+          <li>Profilin yeni hâli için örnek kurgu</li>
+          <li>Fotoğrafçıyla birlikte nasıl çalışacağımız</li>
+        </ul>
+        <p class="cta">Uygun olduğunuz günü bu mesaja yanıt olarak yazmanız yeterli.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer lang="tr">
+  <div class="wrap">
+    <p>Veriler 29 Ekim 2026 tarihinde Instagram, Google Haritalar ve herkese açık kaynaklardan alınmıştır.</p>
+  </div>
+</footer>
+</body>
+</html>
